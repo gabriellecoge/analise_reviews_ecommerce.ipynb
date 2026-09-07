@@ -38,7 +38,7 @@ Dataset público de avaliações reais de um varejista de moda feminina (anonimi
 - `Review Text` ausente em 845 registros (3,6%) — removidos na etapa de modelagem, já que o texto é a variável preditora
 - `Division/Department/Class Name` ausentes nas mesmas 14 linhas
 - 21 linhas totalmente duplicadas
-- "Initmates" aparece com erro de digitação na origem (Intimates)
+
 
 ---
 
@@ -141,8 +141,6 @@ Comparar o resultado com a linha de base — e não olhar a acurácia isolada �
 O texto livre da avaliação, sozinho, prevê a recomendação com 88% de acurácia — mas a métrica que importa aqui é o recall da classe negativa: **7 em cada 10 clientes insatisfeitas são identificadas automaticamente.** Isso permite triagem de avaliações negativas em escala, sem leitura manual de milhares de registros.
 
 A tentativa de prever a divisão do catálogo a partir do mesmo texto falhou, e a comparação entre os dois modelos é o resultado mais interessante do projeto: **a mesma variável de entrada, com a mesma técnica, resolve um problema e não resolve o outro** — porque a informação buscada está presente em um caso e ausente no outro. Nenhum ajuste de hiperparâmetro corrige a ausência de sinal.
-
-Os próximos passos naturais seriam tratar o desbalanceamento do Modelo 1 (reamostragem ou ajuste de peso das classes) para elevar o recall da classe 0, e examinar os termos mais associados à não recomendação — o que transformaria o modelo de uma ferramenta de triagem em um diagnóstico do que, especificamente, está desagradando.
 
 ---
 
